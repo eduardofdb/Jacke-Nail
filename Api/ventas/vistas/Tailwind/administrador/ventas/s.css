@@ -1,0 +1,71 @@
+/* Estilo para el contenedor de la tabla */
+#venta {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Ajusta el estilo de las celdas al hacer hover */
+#venta tbody tr:hover {
+    background-color: #F9FAFB;
+}
+
+/* Ajusta el estilo de las celdas al hacer hover */
+#venta tbody tr:hover td {
+    background-color: #F9FAFB !important;
+}
+
+/* Estilo para el botón en la columna de acciones */
+#venta tbody tr td:last-child button {
+    margin-bottom: 0; /* Evita el espacio extra debajo del botón */
+}/* Estilo para el contenedor del menú desplegable */
+/* Estilo para el contenedor del menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo para el botón de tres puntos */
+.dropdown-btn {
+    font-size: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el menú desplegable */
+/* Estilo para el menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd; /* Borde para mayor definición */
+    z-index: 1;
+}
+
+/* Estilo para los elementos dentro del menú desplegable */
+.dropdown-content a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ddd; /* Borde entre elementos */
+}
+
+/* Estilo para el último elemento del menú desplegable (eliminar el borde inferior) */
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+/* Ajusta este estilo según tus necesidades para hacer visible el menú desplegable al hacer clic */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.container {
+    max-width: 1400px;
+    /* Otros estilos si es necesario */
+}

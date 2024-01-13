@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css"  rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Document</title>
+</head>
+<body>
+    
+    
+
+  <nav class="fixed top-0 z-50 w-full bg-white border-2 border-gray-700">
+    <div class="px-3 py-3 lg:px-5 lg:pl-3 ">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center justify-start">
+          
+          <a href="#" class="flex ml-2 md:mr-24">
+            <img src="Logo.png" class="w-10 h-10 rounded-full"   />
+            <span class="text-black focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 mr-2 " type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Jacke Nail</span>
+          </a>
+        </div>
+        <div class="flex items-center">
+            <div class="flex items-center ml-3">
+              <div>
+                  
+                  <i class='bx bx-user' style='color:black' data-dropdown-toggle="dropdown-user" ></i>
+              </div>
+              <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
+                <div class="px-4 py-3" role="none">
+                  <p class="text-sm text-gray-900 dark:text-white" role="none">
+                   Johan Martínez
+                  </p>
+                  <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+                   Johan@gmail.com
+                  </p>
+                </div>
+                <ul class="py-1" role="none">
+                  <li>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Perfil</a>
+                  </li>
+                
+                  <li>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Cerrar sesión</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    
+  </nav>
+  <div id="drawer-navigation" class="  border-2 border-gray-700 fixed left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-gray-800 " tabindex="-1" aria-labelledby="drawer-navigation-label">
+    <br><br><br>
+          
+        <div class="py-4 overflow-y-auto ">
+          <ul class="space-y-2 font-medium">
+          <li>
+            <p class="text-center"><i class='bx bx-user' style='color:black' ></i>    Administrador</p>
+          </li>
+            <br><br>
+            <li>
+               <a href="#" class=" flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-100 border-2 border-red-300 dark:hover:bg-gray-700 group">
+                  
+                  <i class='bx bx-cog'></i>
+    
+                  <span class="flex-1 ml-3 whitespace-nowrap">Configuracion</span>
+               </a>
+            </li>
+            <li>
+               <a href="#" class=" border-2 border-red-300 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-100 dark:hover:bg-gray-700 group">
+                 <i class='bx bx-user' style='color:black' ></i>
+                  <span class="flex-1 ml-3 whitespace-nowrap">Usuarios</span>
+               </a>
+            </li>
+            <li>
+               <a href="#" class=" border-2 border-red-300 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-100 dark:hover:bg-gray-700 group">
+                 <i class='bx bx-calendar' style='color:black' ></i>                 <span class="flex-1 ml-3 whitespace-nowrap">Agendamiento</span>
+               </a>
+            </li>
+            <li>
+               <a href="#" class=" border-2 border-red-300 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-100 dark:hover:bg-gray-700 group">
+                 <i class='bx bx-shopping-bag' style='color:black' ></i>
+                  <span class="flex-1 ml-3 whitespace-nowrap">Compras</span>
+               </a>
+            </li>
+            <li>
+             <a href="#" class=" border-2 border-red-300 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-100 dark:hover:bg-gray-700 group">
+               <i class='bx bxs-purchase-tag'></i>
+                <span class="flex-1 ml-3 whitespace-nowrap">productos</span>
+             </a>
+          </li>
+          <li>
+            <a href="#" class=" border-2 border-red-300 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-100 dark:hover:bg-gray-700 group">
+              <i class='bx bx-cart-alt' style='color:black' ></i>
+              <span class="flex-1 ml-3 whitespace-nowrap">Ventas</span>
+            </a>
+         </li>
+            
+           
+         </ul>
+         
+         </div>
+      </div>
+    <div class="relative">
+      <div class="relative overflow-x-auto shadow-md sm:rounded-lg" >
+         <div class="relative overflow-x-auto">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+               <thead class="text-xs text-gray-900 uppercase dark:text-gray-400">
+                   <tr>
+                       <th scope="col" class="px-6 py-3">
+                           Product name
+                       </th>
+                       <th scope="col" class="px-6 py-3">
+                           Color
+                       </th>
+                       <th scope="col" class="px-6 py-3">
+                           Category
+                       </th>
+                       <th scope="col" class="px-6 py-3">
+                           Price
+                       </th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr class="bg-white dark:bg-gray-800">
+                       <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                           Apple MacBook Pro 17"
+                       </th>
+                       <td class="px-6 py-4">
+                           Silver
+                       </td>
+                       <td class="px-6 py-4">
+                           Laptop
+                       </td>
+                       <td class="px-6 py-4">
+                           $2999
+                       </td>
+                   </tr>
+                   <tr class="bg-white dark:bg-gray-800">
+                       <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                           Microsoft Surface Pro
+                       </th>
+                       <td class="px-6 py-4">
+                           White
+                       </td>
+                       <td class="px-6 py-4">
+                           Laptop PC
+                       </td>
+                       <td class="px-6 py-4">
+                           $1999
+                       </td>
+                   </tr>
+                   <tr class="bg-white dark:bg-gray-800">
+                       <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                           Magic Mouse 2
+                       </th>
+                       <td class="px-6 py-4">
+                           Black
+                       </td>
+                       <td class="px-6 py-4">
+                           Accessories
+                       </td>
+                       <td class="px-6 py-4">
+                           $99
+                       </td>
+                   </tr>
+               </tbody>
+           </table>
+         </div>
+      </div>
+    </div>
+
+ 
+  
+  
+  <!-- <div class="p-4 sm:ml-64">
+   
+  </div> -->
+  
+
+
+
+
+
+
+   
+        
+    
+  
+  
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+
+</html>

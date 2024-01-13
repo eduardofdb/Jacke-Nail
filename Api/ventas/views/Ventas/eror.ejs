@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-800 shadow-md">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/images/jacke.png" class="h-10" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Jacke nail</span>
+            </a>
+            <button data-collapse-toggle="navbar-solid-bg" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-solid-bg" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+                <ul
+                    class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+                    <li>
+                        <a href="http://localhost:3000/Ventas/ventas"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Ventas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:3000/Ventas/usuarios"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Usuarios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:3000/Ventas/servicios"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:3000/Ventas/insumos"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Insumos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="text-center my-12 mb-2">
+        <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+            <li class="inline-flex items-center">
+                <a href="#"
+                    class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                    <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+                    </svg>
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <div class="flex items-center">
+                    <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" fill="none"
+                        viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <a
+                        class="cursor-pointer ms-1 text-sm font-medium text-gray-700  md:ms-2 dark:text-gray-400 dark:hover:text-white">Ventas</a>
+                </div>
+            </li>
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Registrar
+                        Ventas</span>
+                </div>
+            </li>
+        </ol>
+    </div>
+    <div class="content-wrapper">
+        <section class="content">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-10 col-xl-8">
+                    <div class="box border-3 shadow p-2 mt-4 mb-3" style="overflow: hidden;">
+                        <div class="box-header with-border">
+                            <h1 class="box-title text-center">Crear Ventas
+                                <button class="btn" style="background-color: #000; color: #fff;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        style="fill: rgba(255, 255, 255, 1); transform: msFilter">
+                                        <path
+                                            d="M19 2H5C3.346 2 2 3.346 2 5v2.831c0 1.053.382 2.01 1 2.746V20a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-5h4v5a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-9.424c.618-.735 1-1.692 1-2.746V5c0-1.654-1.346-3-3-3zm1 3v2.831c0 1.14-.849 2.112-1.891 2.167L18 10c-1.103 0-2-.897-2-2V4h3c.552 0 1 .449 1 1zM10 8V4h4v4c0 1.103-.897 2-2 2s-2-.897-2-2zM4 5c0-.551.448-1 1-1h3v4c0 1.103-.897 2-2 2l-.109-.003C4.849 9.943 4 8.971 4 7.831V5zm6 11H6v-3h4v3z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </h1>
+                        </div>
+
+
+                        <div class="panel-body" style="margin-bottom: 10px;" id="formularioregistros">
+                            <form action="" name="formulario" id="formulario" method="POST" class="row">
+                                <div class="form-group col-lg-8 col-md-8 col-xs-12">
+                                    <label for="">Servicos</label>
+                                    <input class="form-control" type="hidden" name="idventa" id="idventa">
+
+                                    <select name="Servicios" id="Servicios" class="form-control selectpicker"
+                                        data-live-search="true" required>
+                                        <option value="">Seleccione un servicio</option>
+                                        <% Servicios.forEach((servicio)=> { %>
+                                            <option value="<%= servicio._id %>"
+                                                data-precio="<%= servicio.precioServicio %>">
+                                                <%= servicio.nombreServicio %> - $<%= servicio.precioServicio %> - <%=
+                                                            servicio.tiempoServicio %> minutos
+                                            </option>
+                                            <% }); %>
+                                    </select>
+
+                                </div>
+                                <div class="form-group col-lg-4 col-md-4 col-xs-12">
+                                    <label for="">Fecha: </label>
+                                    <input class="form-control" type="date" name="fecha_hora" id="fecha_hora" required>
+                                </div>
+                                <div class="form-group row">
+                                    <!-- Empleado (col-lg-6) -->
+                                    <div class="col-lg-4">
+                                        <label for="">Empleado</label>
+                                        <select name="tipo_comprobante" id="Empleado" class="form-control selectpicker"
+                                            required>
+                                            <option value="">Seleccione un Empleado</option>
+
+                                            <% Empleado.forEach((Empleado)=> { %>
+                                                <option value="<%= Empleado._id %>">
+                                                    <%= Empleado.nombre_completo %> - <%= Empleado.rol %>
+                                                </option>
+                                                <% }); %>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="col-lg-4">
+                                        <label for="">Cliente</label>
+                                        <select name="tipo_comprobante" id="Cliente" class="form-control selectpicker"
+                                            required>
+                                            <option value="Boleta">Seleccione una opción</option>
+                                            <% Cliente.forEach((Cliente)=> { %>
+                                                <option value="<%= Cliente._id %>">
+                                                    <%= Cliente.nombre_completo %> - <%= Cliente.rol %>
+                                                </option>
+                                                <% }); %>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label for="">Precio: </label>
+                                        <input class="form-control" type="text" name="Precio" id="Precio" maxlength="7"
+                                            placeholder="Serie" readonly>
+                                    </div>
+
+                                    <!-- Adiciones (col-lg-2) -->
+                                    <div class="col-lg-2 ">
+                                        <label for="">Adiciones </label>
+                                        <input class="form-control" type="text" name="Adiciones" id="Adiciones"
+                                            maxlength="10" placeholder="Número" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12 mt-2 mb-3 ml-auto">
+                                    <button type="button"
+                                        class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 shadow-lg shadow-lime-500/50 dark:shadow-lg dark:shadow-lime-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 "
+                                        onclick="openModal()"> <i class="fa-solid fa-cart-shopping"></i>insumos</button>
+
+
+                                </div>
+
+                                <div class="form-group col-lg-12 col-md-12 col-xs-12">
+                                    <table id="detalles"
+                                        class="table table-striped table-bordered table-condensed table-hover">
+                                        <thead style="background-color:#000000; color:#FFFFFF">
+                                            <th>Opciones</th>
+                                            <th>INsumo</th>
+                                            <th>Exitencias</th>
+                                            <th>Categorias</th>
+                                            <th>Subtotal</th>
+                                            <th>Cantidad</th>
+                                        </thead>
+                                        <tfoot>
+                                            <th>TOTAL</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th>
+                                                <h4 id="total">S/. 0.00</h4><input type="hidden" name="total_venta"
+                                                    id="total_venta">
+                                            </th>
+                                        </tfoot>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <button type="button" onclick="enviarVenta()"
+                                        class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Guardar</button>
+                                    <button class="btn btn-danger mx-3" onclick="cancelarform()" type="button"
+                                        id="btnCancelar"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Detalles del Producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <% for (let i=0; i < Modeloinsumoss.length; i++) { %>
+                        <% if (i % 3===0) { %>
+                            <div class="flex flex-wrap justify-center">
+                                <% } %>
+                                    <div
+                                        class="product-card max-w-md mx-auto bg-white border border-gray-300 p-4 rounded-md shadow-md flex flex-col items-center">
+                                        <div class="mb-4 ml-auto">
+                                            <button id="addToCartBtn_<%= i %>" class="p-2 bg-gray-100 rounded-full">
+                                                <!-- Icono de estrella (puedes agregar tu propio SVG aquí) -->
+                                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 2s1.42 3.66 2.34 6.86c.23.82.44 1.7.64 2.64H19c1.1 0 2-.9 2-2s-.9-2-2-2h-3.34L12 2zM12 2s-1.42 3.66-2.34 6.86c-.23.82-.44 1.7-.64 2.64H5c-1.1 0-2-.9-2-2s.9-2 2-2h3.34L12 2z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <img src="/images/<%= encodeURIComponent(Modeloinsumoss[i].Img) %>"
+                                            alt="Product Image" class="w-32 h-32 object-cover rounded mb-4">
+                                        <div class="text-center">
+                                            <p class="text-red-600 font-bold text-lg">$ <%=
+                                                    Modeloinsumoss[i].cantidadInsumo %>
+                                            </p>
+                                            <p class="text-gray-800 text-sm">
+                                                <%= Modeloinsumoss[i].nombreInsumo %>
+                                            </p>
+                                            <p class="text-gray-600 text-xs">1 un (un a $ 59.990)</p>
+                                        </div>
+                                        <div class="mt-4">
+                                            <div id="addToCartInput_<%= i %>" class="flex items-center space-x-2">
+                                                <input id="cantidadVenta" type="number"
+                                                    class="border border-gray-400 p-1 w-12 text-center" value="1"
+                                                    min="1">
+                                                <button
+                                                    class="bg-blue-500 text-white py-2 px-8 rounded-full focus:outline-none transition-all duration-300 transform hover:scale-105"
+                                                    onclick="addToCart('<%= Modeloinsumoss[i]._id %>')">Agregar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% if ((i + 1) % 3===0 || i===Modeloinsumoss.length - 1) { %>
+                            </div>
+                            <% } %>
+                                <% } %>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openModal() {
+            const modal = new bootstrap.Modal(document.getElementById('productModal'));
+            modal.show();
+        }
+
+        function closeModal() {
+            const modal = new bootstrap.Modal(document.getElementById('productModal'));
+            modal.hide();
+        }
+
+        document.getElementById('Cliente').addEventListener('change', actualizarPrecioTotal);
+
+        document.getElementById('Adiciones').addEventListener('input', actualizarPrecioTotal);
+        function actualizarPrecioTotal() {
+            // Obtener el select
+            var select = document.getElementById('Servicios');
+
+            // Obtener el precio del servicio seleccionado
+            var precioInsumo = select.options[select.selectedIndex].getAttribute('data-precio');
+
+            // Obtener el valor de las adiciones
+            var adicionesInput = document.getElementById('Adiciones');
+            var adiciones = parseFloat(adicionesInput.value) || 0; // Convertir a número, si es posible
+
+            // Calcular el precio total
+            var precioTotal = parseFloat(precioInsumo) + adiciones;
+
+            // Actualizar el campo de precio
+            var precioInput = document.getElementById('Precio');
+            precioInput.value = (precioInsumo) ? '$' + precioInsumo : '';
+
+            // Mostrar el precio total en la etiqueta h4
+            var totalElement = document.getElementById('total');
+            totalElement.textContent = 'S/. ' + precioTotal.toFixed(2);
+
+            // Actualizar el campo oculto con el total
+            var totalVentaInput = document.getElementById('total_venta');
+            totalVentaInput.value = precioTotal.toFixed(2);
+
+            // Devolver el precio total
+            return precioTotal;
+        }
+
+        document.getElementById('Servicios').addEventListener('change', actualizarPrecioTotal);
+        document.getElementById('Adiciones').addEventListener('input', actualizarPrecioTotal);
+
+
+        const carrito = [];
+        function addToCart(insumoId) {
+
+            try {
+                fetch(`http://localhost:3000/Ventas/Insumos/buscarinsumo/${insumoId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Respuesta de la API:', data);
+
+                        const cantidadInput = document.getElementById('cantidadVenta');
+                        const cantidadSeleccionada = cantidadInput.value;
+
+                        // Agregar el insumo a la tabla con la cantidad seleccionada
+                        addToTable(data, cantidadSeleccionada);
+
+                        // Limpiar el input de cantidadVenta después de agregar
+                        cantidadInput.value = 1;
+
+
+                        // Limpiar el input de cantidad después de agregar
+                        document.getElementById(`quantityInput_${insumoId}`).value = 1;
+                    })
+                    .catch(error => console.error('Error al procesar la solicitud:', error));
+            } catch (error) {
+                console.error('Error al procesar la solicitud:', error);
+            }
+        }
+        const insumosAgregados = new Set();
+        let resultadosResta = [];
+        function addToTable(insumo, cantidadSeleccionada) {
+            const tableBody = document.querySelector('#detalles tbody');
+
+            // Verificar si el insumo ya fue agregado
+            if (insumosAgregados.has(insumo.ventas._id)) {
+                console.log('El insumo ya ha sido agregado.');
+                return;
+            }
+
+            // Agregar el identificador del insumo al conjunto
+            insumosAgregados.add(insumo.ventas._id);
+
+            // Crear una fila
+            const row = tableBody.insertRow();
+            const opcionesCell = row.insertCell(0);
+            const nombreInsumoCell = row.insertCell(1);
+            const cantidadInsumoCell = row.insertCell(2);
+            const categoriaCell = row.insertCell(3);
+            const cantidadCell = row.insertCell(4);
+            const nuevoCampoCell = row.insertCell(5);
+
+            // cargar el contenido de las celdas
+            opcionesCell.innerHTML = `<button style="color: red; font-size: 1.5em;" onclick="deleteFromTable(this)" data-insumo-id="${insumo.ventas._id}"><i class="fas fa-trash-alt"></i></button>`;
+            nombreInsumoCell.textContent = insumo.ventas.nombreInsumo;
+            cantidadInsumoCell.textContent = insumo.ventas.cantidadInsumo;
+            categoriaCell.textContent = insumo.ventas.categoria;
+            cantidadCell.textContent = insumo.ventas.cantidad;
+
+            // Crear un nuevo input con el valor de cantidadSeleccionada
+            const nuevoCampoInput = document.createElement('input');
+            nuevoCampoInput.type = 'text';
+            nuevoCampoInput.value;
+
+            nuevoCampoInput.addEventListener('input', function () {
+                const cantidadInsumoInputValue = nuevoCampoInput.value;
+
+                // Restar la cantidad del input desde las existencias
+                const resultadoResta = insumo.ventas.cantidadInsumo - parseFloat(cantidadInsumoInputValue);
+
+                // Obtener las existencias (asumiendo que las existencias están en la celda 2)
+                const existencias = parseInt(cantidadInsumoCell.textContent, 10);
+
+                // Validar si la cantidad ingresada es mayor que las existencias
+                if (parseFloat(cantidadInsumoInputValue) > existencias) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'La cantidad no puede ser mayor que las existencias.',
+                    });
+                    nuevoCampoInput.value = ''; // Limpiar el valor del input en caso de error
+                    return; // No continuar con la operación si hay un error de validación
+                }
+
+                // Almacenar el resultado en el arreglo
+                resultadosResta.push({ idInsumo: insumo.ventas._id, cantidad: resultadoResta });
+
+                cantidadCell.textContent = resultadoResta; // Actualizar la cantidad mostrada en la celda
+
+                updateTotal();  // Actualizar el total al cambiar el valor
+            });
+
+            // Agregar el nuevo input antes del último elemento en la celda
+            nuevoCampoCell.insertBefore(nuevoCampoInput, nuevoCampoCell.lastChild);
+            const tableRows = tableBody.querySelectorAll('tr');
+            const ultimaFila = tableRows[tableRows.length - 1];
+            const ultimoInput = ultimaFila.querySelector('input[id^="nuevoCampo_"]');
+            cantidadInsumo = ultimoInput ? ultimoInput.value : '';
+
+            // Actualizar el total
+            updateTotal();
+        }
+
+
+        function deleteFromTable(button) {
+            const insumoId = button.getAttribute('data-insumo-id');
+
+            // Eliminar la fila del DOM
+            const row = button.closest('tr');
+            row.remove();
+
+
+            updateTotal();
+        }
+
+
+        function updateTotal() {
+
+            document.getElementById('total').textContent = 'Nuevo total';  // Reemplaza con el valor correcto
+        }
+
+        function enviarVenta() {
+            // Obtener los datos del formulario
+            const precioTotal = actualizarPrecioTotal();
+
+            const fecha_hora = document.getElementById('fecha_hora').value;
+            const Empleado = document.getElementById('Empleado').value;
+            const Servicios = document.getElementById('Servicios').value;
+            const Cliente = document.getElementById('Cliente').value;
+            const Adiciones = document.getElementById('Adiciones').value;
+
+
+
+
+            resultadosResta.forEach((resultado) => {
+                const { idInsumo, cantidad } = resultado;
+
+                const detallesInsumos = [idInsumo, cantidad]
+                const datosVenta = {
+                    empleadoId: Empleado,
+                    clienteId: Cliente,
+                    servicioId: Servicios,
+                    precioVenta: precioTotal,
+                    adiciones: Adiciones,
+                    fecha: fecha_hora,
+                    detallesInsumos: [detallesInsumos],
+
+                };
+
+                console.log(datosVenta)
+
+                Swal.fire({
+                    title: '¿Está seguro de Registar esta venta?',
+                    text: 'Si lo elimina, no podrá restablecerlo',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sí, Borrar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Enviar la solicitud POST mediante Fetch solo si se confirma
+                        fetch('http://localhost:3000/Ventas/crearVenta', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(datosVenta),
+                        })
+                            .then((response) => response.json())
+                            .then((data) => {
+                                console.log('Venta enviada con éxito:', data);
+
+                                // Obtener los resultados de la resta
+                                const tableRows = document.querySelectorAll('#detalles tbody tr');
+
+                                tableRows.forEach((row) => {
+                                    const idInsumo = row.querySelector('button').getAttribute('data-insumo-id');
+                                    resultadosResta.forEach((resultado) => {
+                                        const { idInsumo, cantidad } = resultado;
+
+                                        // Hacer la solicitud PATCH o PUT para actualizar la cantidad del insumo
+                                        fetch(`http://localhost:3000/Ventas/actualizarCantidad/${idInsumo}`, {
+                                            method: 'put',
+                                            headers: {
+                                                'Content-Type': 'application/json',
+                                            },
+                                            body: JSON.stringify({ cantidadInsumo: cantidad }),
+                                        })
+                                            .then((response) => response.json())
+                                            .then((insumoActualizado) => {
+                                                console.log('Cantidad de insumo actualizada:', insumoActualizado);
+                                                // Puedes realizar acciones adicionales después de actualizar la cantidad
+                                            })
+                                            .catch((error) => {
+                                                console.error('Error al actualizar la cantidad del insumo:', error);
+                                            });
+                                    });
+                                });
+                            })
+                            .catch((error) => {
+                                console.error('Error al enviar la venta:', error);
+                            });
+                    }
+                });
+
+
+            });
+            }
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap y jQuery scripts (asegúrate de incluir jQuery antes de Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+
+    <style>
+        @keyframes addedAnimation {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Ajustes para las tarjetas de producto en el modal */
+        .product-card {
+            max-width: 300px;
+            /* Ancho máximo de cada tarjeta de producto */
+            margin: 0.9rem;
+            /* Margen entre las tarjetas de producto */
+
+        }
+
+        /* Ajustes para el modal */
+        #productModal .modal-dialog {
+            max-width: 900px;
+            /* Ancho máximo del modal */
+        }
+    </style>
+
+</body>
+
+</html>
